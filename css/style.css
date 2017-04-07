@@ -1,0 +1,37 @@
+input.ng-invalid{
+	border: 1 px solid red;
+}
+
+p.error {
+	color: red;
+}
+
+.ui{
+	color: red;
+}
+
+label{
+display: inline-block;
+width: 150px;
+
+}
+.field{
+	margin-bottom: 20px;
+}
+button{
+	display: block;	
+}
+.search{
+
+  padding-top: 100px;
+}
+
+.row.review{
+  height: 20px;
+}
+
+input:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}

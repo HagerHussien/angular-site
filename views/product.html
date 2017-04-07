@@ -1,0 +1,65 @@
+<div class="container">
+<div class="row">
+<!-- <h1>{{ product.price | round:2}}</h1> -->
+    <h1>{{product.name}}</h1>
+    <div class="thumbnail">
+      <img src="{{product.image}}" class="img-square" style="  height: 300px;">
+	     <!-- <input type="text" ng-model="product.rate"> -->
+        <!--   <div star-raating ng-model="product.rate"></div> -->
+        <div class="caption">
+        <div class="row">
+          <div class="col-md-6 col-sm-12"> 
+            <div class="panel panel-primary" >
+            <div class="panel-body">
+                 <h3>production YEAR : {{product.year}}</h3>
+                  <h4> PRICE : {{product.price | currency}}</h4>
+            </div>
+          </div>
+          </div>
+  
+          <div class="col-md-6 col-sm-12">
+       
+          <div class="panel panel-primary" >
+            <div class="panel-body">
+                <h4>FEARURES : </h4>
+            </div>
+            <div class="panel-footer">
+                <ul style="list-style: none;">
+                  <li><b> weight : </b>{{product.features.weight}}</li>
+                  <li> <b> ram :</b>{{product.features.ram}}</li>
+                  <li> <b>camera :</b>{{product.features.camera}}</li>
+                  <li> <b>display :</b>{{product.features.display}}</li>
+                  <li><b> memory : </b>{{product.features.memory}}</li>
+                </ul>
+            </div>
+          </div>
+          </div>
+          </div>
+        
+          <div class="panel panel-primary" >
+           <div class="panel-body ">
+                <h4>REVIEWS : </h4>
+           </div>
+
+              <div class="panel-footer" ng-repeat="rat in product.reviews">
+                <div class="row review">
+                    <div class="col-sm-6 col-md-8">
+                        {{rat.reviewer}} : {{rat.review}}                          
+                    </div>
+                      <div class="col-sm-6 col-md-4">
+                               <div star-raating ng-model="rat.rate"></div>
+                    </div>
+
+                    
+                </div>
+
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

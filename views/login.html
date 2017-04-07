@@ -1,0 +1,18 @@
+<div class="container" >
+<form ng-submit="submitted=true ; loginFn(login.$valid)" name="login"  novalidate >
+	<div class="field">
+	<label>user name</label>
+		<input type="text" name="username" required ng-model="user.username">
+			<p class="error" ng-if="login.username.$error.required && submitted" >please enter your user name</p>
+	</div>
+
+	<div class="field">
+	<label>password</label>
+		<input type="password" name="password"  required ng-model="user.password">
+		<p class="error" ng-if="login.password.$error.required && submitted" >please enter your password</p>
+	</div>
+	
+	<button type="submit" name="button">Login</button>
+</form>
+
+</div>
